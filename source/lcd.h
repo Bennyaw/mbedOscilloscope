@@ -11,7 +11,7 @@ void lcd_line_clr(int line);
 void place_grid(void);
 void lcd_line(int x0, int y0, int x1, int y1, int color);
 void lcd_pixel(int x, int y, int color);
-
+void place_border(void);
 //defines for DMA
 
 #define DMA_CHANNEL_ENABLE      1

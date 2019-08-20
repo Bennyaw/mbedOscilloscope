@@ -101,14 +101,13 @@ void lcd_thread(const void *args){
 	lcd_init( );	// Initialise LCD
 			
 	for (;;) {
+		
 		result = osMessageGet(msg_id, osWaitForever);
-		lcd_line_clr(1);
-		lcd_line_clr(2);
-		lcd_line_clr(3);
-		lcd_line_clr(4);						// Point & Clear line 4
+		lcd_clear();
+		place_border();
 		volts = calculateVoltFromAdcVal(result.value.v);
 		sprintf((char *)str, "ADC value is: %d",	result.value.v);
-		lcd_disp(4, 0, str);
+		lcd_disp(1, 1, str);
 		osDelay(1000);										// Wait 1 second
 	}
 }

@@ -17,7 +17,10 @@
 
 // Global Variables
 	unsigned char current_lcd_line;	// LCD line or page
-
+	unsigned int draw_mode;
+	enum {NORMAL,XOR};
+	unsigned char buffer[512];
+	int auto_up;
 // Initialize SPI
 void	spi_init( ) {
 	LPC_SC->PCONP |= 1 <<10; 			// Enable POWER to SSP1 
@@ -75,6 +78,7 @@ void lcd_reset( ){
 	LPC_GPIO0->FIOCLR = 1<<8; 	// Reset set to LOW
 	delay_us(50);
 	LPC_GPIO0->FIOSET = 1<<8; 	// release Reset
+	auto_up=1;
 	delay_ms(5);
 }
 
@@ -156,7 +160,228 @@ void	lcd_disp(int line, int col, char * s) {
 	while (*s)
 	lcd_write_char(*s++);								// Write character until end of string
 }
+void lcd_copy_to_lcd(void)
+{
+#ifndef TARGET_LPC1768
+    int i;
+#endif
+    //page 0
+    wr_cmd(0x00);      // set column low nibble 0
+    wr_cmd(0x10);      // set column hi  nibble 0
+    wr_cmd(0xB0);      // set page address  0
+    LPC_GPIO0->FIOSET = 1<<6;
+#if defined TARGET_LPC1768
+    LPC_GPIO0->FIOCLR = 1<<18;
+    // start 128 byte DMA transfer to SPI1
+    LPC_GPDMACH0->DMACCDestAddr = (uint32_t)&LPC_SSP1->DR; // we send to SSP1
+    LPC_SSP1->DMACR = 0x2;  // Enable SSP1 for DMA.
+    LPC_GPDMA->DMACIntTCClear = 0x1;
+    LPC_GPDMA->DMACIntErrClr = 0x1;
+    LPC_GPDMACH0->DMACCSrcAddr = (uint32_t) (buffer);
+    LPC_GPDMACH0->DMACCControl = 128 | (1UL << 31) |  DMA_CHANNEL_SRC_INC ; // 8 bit transfer , address increment, interrupt
+    LPC_GPDMACH0->DMACCConfig  = DMA_CHANNEL_ENABLE | DMA_TRANSFER_TYPE_M2P | DMA_DEST_SSP1_TX;
+    LPC_GPDMA->DMACSoftSReq = 0x1;
+    do {
+    } while ((LPC_GPDMA->DMACRawIntTCStat & 0x01) == 0); // DMA is running
+    do {
+    } while ((LPC_SSP1->SR & 0x10) == 0x10); // SPI1 not idle
+    LPC_GPIO0->FIOSET = 1<<18; 
+#else  // no DMA
+    for(i=0; i<128; i++) {
+        wr_dat(buffer[i]);
+    }
+#endif
 
+    // page 1
+    wr_cmd(0x00);      // set column low nibble 0
+    wr_cmd(0x10);      // set column hi  nibble 0
+    wr_cmd(0xB1);      // set page address  1
+    LPC_GPIO0->FIOSET = 1<<6;
+#if defined TARGET_LPC1768
+    LPC_GPIO0->FIOCLR = 1<<18;
+    // start 128 byte DMA transfer to SPI1
+    LPC_GPDMA->DMACIntTCClear = 0x1;
+    LPC_GPDMA->DMACIntErrClr = 0x1;
+    LPC_GPDMACH0->DMACCSrcAddr = (uint32_t) (buffer + 128);
+    LPC_GPDMACH0->DMACCControl = 128 | (1UL << 31) |  DMA_CHANNEL_SRC_INC ; // 8 bit transfer , address increment, interrupt
+    LPC_GPDMACH0->DMACCConfig  = DMA_CHANNEL_ENABLE | DMA_TRANSFER_TYPE_M2P | DMA_DEST_SSP1_TX;
+    LPC_GPDMA->DMACSoftSReq = 0x1;
+    do {
+    } while ((LPC_GPDMA->DMACRawIntTCStat & 0x01) == 0); // DMA is running
+    do {
+    } while ((LPC_SSP1->SR & 0x10) == 0x10); // SPI1 not idle
+    LPC_GPIO0->FIOSET = 1<<18; 
+#else // no DMA
+    for(i=128; i<256; i++) {
+        wr_dat(buffer[i]);
+    }
+#endif
+
+    //page 2
+    wr_cmd(0x00);      // set column low nibble 0
+    wr_cmd(0x10);      // set column hi  nibble 0
+    wr_cmd(0xB2);      // set page address  2
+    LPC_GPIO0->FIOSET = 1<<6;
+#if defined TARGET_LPC1768
+    LPC_GPIO0->FIOCLR = 1<<18;
+    // start 128 byte DMA transfer to SPI1
+    LPC_GPDMA->DMACIntTCClear = 0x1;
+    LPC_GPDMA->DMACIntErrClr = 0x1;
+    LPC_GPDMACH0->DMACCSrcAddr = (uint32_t) (buffer + 256);
+    LPC_GPDMACH0->DMACCControl = 128 | (1UL << 31) |  DMA_CHANNEL_SRC_INC ; // 8 bit transfer , address increment, interrupt
+    LPC_GPDMACH0->DMACCConfig  = DMA_CHANNEL_ENABLE | DMA_TRANSFER_TYPE_M2P | DMA_DEST_SSP1_TX ;
+    LPC_GPDMA->DMACSoftSReq = 0x1;
+    do {
+    } while ((LPC_GPDMA->DMACRawIntTCStat & 0x01) == 0); // DMA is running
+    do {
+    } while ((LPC_SSP1->SR & 0x10) == 0x10); // SPI1 not idle
+    LPC_GPIO0->FIOSET = 1<<18; 
+#else // no DMA
+    for(i=256; i<384; i++) {
+        wr_dat(buffer[i]);
+    }
+#endif
+
+    //page 3
+    wr_cmd(0x00);      // set column low nibble 0
+    wr_cmd(0x10);      // set column hi  nibble 0
+    wr_cmd(0xB3);      // set page address  3
+    LPC_GPIO0->FIOSET = 1<<6;
+
+    LPC_GPIO0->FIOCLR = 1<<18;
+#if defined TARGET_LPC1768
+    // start 128 byte DMA transfer to SPI1
+    LPC_GPDMA->DMACIntTCClear = 0x1;
+    LPC_GPDMA->DMACIntErrClr = 0x1;
+    LPC_GPDMACH0->DMACCSrcAddr = (uint32_t) (buffer + 384);
+    LPC_GPDMACH0->DMACCControl = 128  | (1UL << 31) |  DMA_CHANNEL_SRC_INC ; // 8 bit transfer , address increment, interrupt
+    LPC_GPDMACH0->DMACCConfig  = DMA_CHANNEL_ENABLE | DMA_TRANSFER_TYPE_M2P | DMA_DEST_SSP1_TX;
+    LPC_GPDMA->DMACSoftSReq = 0x1;
+    do {
+    } while ((LPC_GPDMA->DMACRawIntTCStat & 0x01) == 0); // DMA is running
+    do {
+    } while ((LPC_SSP1->SR & 0x10) == 0x10); // SPI1 not idle
+    LPC_GPIO0->FIOSET = 1<<18; 
+#else // no DMA
+    for(i=384; i<512; i++) {
+        wr_dat(buffer[i]);
+    }
+#endif
+}
+
+
+void lcd_pixel(int x, int y, int color)
+{
+    // first check parameter
+    if(x > 128 || y > 32 || x < 0 || y < 0) return;
+
+    if(draw_mode == NORMAL) {
+        if(color == 0)
+            buffer[x + ((y/8) * 128)] &= ~(1 << (y%8));  // erase pixel
+        else
+            buffer[x + ((y/8) * 128)] |= (1 << (y%8));   // set pixel
+    } else { // XOR mode
+        if(color == 1)
+            buffer[x + ((y/8) * 128)] ^= (1 << (y%8));   // xor pixel
+    }
+}
+
+void lcd_line(int x0, int y0, int x1, int y1, int color)
+{
+    int   dx = 0, dy = 0;
+    int   dx_sym = 0, dy_sym = 0;
+    int   dx_x2 = 0, dy_x2 = 0;
+    int   di = 0;
+
+    dx = x1-x0;
+    dy = y1-y0;
+
+    //  if (dx == 0) {        /* vertical line */
+    //      if (y1 > y0) vline(x0,y0,y1,color);
+    //      else vline(x0,y1,y0,color);
+    //      return;
+    //  }
+
+    if (dx > 0) {
+        dx_sym = 1;
+    } else {
+        dx_sym = -1;
+    }
+    //  if (dy == 0) {        /* horizontal line */
+    //      if (x1 > x0) hline(x0,x1,y0,color);
+    //      else  hline(x1,x0,y0,color);
+    //      return;
+    //  }
+
+    if (dy > 0) {
+        dy_sym = 1;
+    } else {
+        dy_sym = -1;
+    }
+
+    dx = dx_sym*dx;
+    dy = dy_sym*dy;
+
+    dx_x2 = dx*2;
+    dy_x2 = dy*2;
+
+    if (dx >= dy) {
+        di = dy_x2 - dx;
+        while (x0 != x1) {
+
+            lcd_pixel(x0, y0, color);
+            x0 += dx_sym;
+            if (di<0) {
+                di += dy_x2;
+            } else {
+                di += dy_x2 - dx_x2;
+                y0 += dy_sym;
+            }
+        }
+        lcd_pixel(x0, y0, color);
+    } else {
+        di = dx_x2 - dy;
+        while (y0 != y1) {
+            lcd_pixel(x0, y0, color);
+            y0 += dy_sym;
+            if (di < 0) {
+                di += dx_x2;
+            } else {
+                di += dx_x2 - dy_x2;
+                x0 += dx_sym;
+            }
+        }
+        lcd_pixel(x0, y0, color);
+    }
+    if(auto_up) lcd_copy_to_lcd();
+}
+
+#define NUMHORIZPIXELS		128
+#define NUMVERTPIXELS		32
+#define FIRSTVERT			21
+#define SECONDVERT			42
+#define THIRDVERT			63
+#define FOURTHVERT			84
+#define FIFTHVERT			105
+#define FIRSTHORIZ			11
+#define SECONDHORIZ			22
+void place_grid(void)
+{
+	lcd_line(FIRSTVERT, 0, FIRSTVERT, NUMVERTPIXELS-1, 1);
+	lcd_line(SECONDVERT, 0, SECONDVERT, NUMVERTPIXELS-1, 1);
+	lcd_line(THIRDVERT, 0, THIRDVERT, NUMVERTPIXELS-1, 1);
+	lcd_line(FOURTHVERT, 0, FOURTHVERT, NUMVERTPIXELS-1, 1);
+	lcd_line(FIFTHVERT, 0, FIFTHVERT, NUMVERTPIXELS-1, 1);
+	lcd_line(0, FIRSTHORIZ, NUMHORIZPIXELS-1, FIRSTHORIZ, 1);
+	lcd_line(0, SECONDHORIZ, NUMHORIZPIXELS-1, SECONDHORIZ, 1);
+}
+
+void place_border(void){
+	lcd_line(0,0,NUMHORIZPIXELS-1,0,1);//low border line
+	lcd_line(0,NUMVERTPIXELS-1,NUMHORIZPIXELS-1,NUMVERTPIXELS-1,1);//top border line
+	lcd_line(0,0,0,NUMVERTPIXELS-1,1);//left border line
+	lcd_line(NUMHORIZPIXELS-1,0,NUMHORIZPIXELS-1,NUMVERTPIXELS-1,1);
+}
 /******************************************************************************/
 /* 'Retarget' layer for target-dependent low level functions      						*/
 /******************************************************************************/

@@ -1,81 +1,75 @@
 Dependencies for Project 'osilloscope', Target 'Target 1': (DO NOT MODIFY !)
-F (.\source\main.c)(0x5D5C0C94)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DLPC175x_6x-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (C:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include\LPC17xx.h)(0x4FF4FDF8)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include\system_LPC17xx.h)(0x4DA4EB6C)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5C8A247C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
-I (source\lcd.h)(0x5D56F2A2)
-I (source\uart.h)(0x564D6CE0)
-I (source\adc.h)(0x56385B36)
-F (.\source\lcd.c)(0x56B46788)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DLPC175x_6x-o .\objects\lcd.o --omf_browse .\objects\lcd.crf --depend .\objects\lcd.d)
-I (C:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include\LPC17xx.h)(0x4FF4FDF8)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include\system_LPC17xx.h)(0x4DA4EB6C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
-I (source\small_font.h)(0x5656776E)
-I (source\lcd.h)(0x5D56F2A2)
-F (.\source\adc.c)(0x5D5C046A)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DLPC175x_6x-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
-I (C:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include\lpc17xx.h)(0x4FF4FDF8)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include\system_LPC17xx.h)(0x4DA4EB6C)
-I (source\adc.h)(0x56385B36)
-F (.\source\uart.c)(0x56B1BDBE)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DLPC175x_6x-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
-I (C:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include\lpc17xx.h)(0x4FF4FDF8)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include\system_LPC17xx.h)(0x4DA4EB6C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
-F (.\source\uart.h)(0x564D6CE0)()
-F (.\source\Retarget_LCD.c)(0x56B82D54)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DLPC175x_6x-o .\objects\retarget_lcd.o --omf_browse .\objects\retarget_lcd.crf --depend .\objects\retarget_lcd.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
-I (C:\Keil_v5\ARM\ARMCC\include\rt_misc.h)(0x5CEB79D6)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (source\lcd.h)(0x5D56F2A2)
-F (.\source\led.c)(0x56973208)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DLPC175x_6x-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
-I (C:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include\LPC17xx.h)(0x4FF4FDF8)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include\system_LPC17xx.h)(0x4DA4EB6C)
-F (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\LIB\ARM\RTX_CM3.lib)(0x5C8B5FFA)()
-F (RTE\CMSIS\RTX_Conf_CM.c)(0x5D5BC3D7)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DLPC175x_6x-o .\objects\rtx_conf_cm.o --omf_browse .\objects\rtx_conf_cm.crf --depend .\objects\rtx_conf_cm.d)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5C8A247C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC\RTX_CM_lib.h)(0x5C8A247C)
-F (RTE\Device\LPC1768\RTE_Device.h)(0x5673AA7A)()
-F (RTE\Device\LPC1768\startup_LPC17xx.s)(0x4DA4EB6C)(--cpu Cortex-M3 --pd "__RTX SETA 1" --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "LPC175x_6x SETA 1"--list .\listings\startup_lpc17xx.lst --xref -o .\objects\startup_lpc17xx.o --depend .\objects\startup_lpc17xx.d)
-F (RTE\Device\LPC1768\system_LPC17xx.c)(0x5D5BEF5C)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="528" -D_RTE_ -DLPC175x_6x-o .\objects\system_lpc17xx.o --omf_browse .\objects\system_lpc17xx.crf --depend .\objects\system_lpc17xx.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include\LPC17xx.h)(0x4FF4FDF8)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8F4DD4)
-I (C:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.2.0\Device\Include\system_LPC17xx.h)(0x4DA4EB6C)
+F (.\source\main.c)(0x5D5C163C)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I D:\RTOS\oscilloscope\RTE-I D:\RTOS\oscilloscope\RTE\Device\LPC1768-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\INC-I D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DLPC175x_6x-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\LPC17xx.h)(0x4FF4FDF8)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm3.h)(0x5625B70C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\system_LPC17xx.h)(0x4DA4EB6C)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x562747DE)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55DB2B7E)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (source\lcd.h)(0x5D5C1645)
+I (source\uart.h)(0x5D5C160F)
+I (source\adc.h)(0x5D5C160F)
+F (.\source\lcd.c)(0x5D5C163E)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I D:\RTOS\oscilloscope\RTE-I D:\RTOS\oscilloscope\RTE\Device\LPC1768-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\INC-I D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DLPC175x_6x-o .\objects\lcd.o --omf_browse .\objects\lcd.crf --depend .\objects\lcd.d)
+I (D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\LPC17xx.h)(0x4FF4FDF8)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm3.h)(0x5625B70C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\system_LPC17xx.h)(0x4DA4EB6C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (source\small_font.h)(0x5D5C160F)
+I (source\lcd.h)(0x5D5C1645)
+F (.\source\adc.c)(0x5D5C160F)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I D:\RTOS\oscilloscope\RTE-I D:\RTOS\oscilloscope\RTE\Device\LPC1768-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\INC-I D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DLPC175x_6x-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
+I (D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\lpc17xx.h)(0x4FF4FDF8)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm3.h)(0x5625B70C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\system_LPC17xx.h)(0x4DA4EB6C)
+I (source\adc.h)(0x5D5C160F)
+F (.\source\uart.c)(0x5D5C160F)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I D:\RTOS\oscilloscope\RTE-I D:\RTOS\oscilloscope\RTE\Device\LPC1768-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\INC-I D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DLPC175x_6x-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+I (D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\lpc17xx.h)(0x4FF4FDF8)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm3.h)(0x5625B70C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\system_LPC17xx.h)(0x4DA4EB6C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+F (.\source\uart.h)(0x5D5C160F)()
+F (.\source\Retarget_LCD.c)(0x5D5C160F)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I D:\RTOS\oscilloscope\RTE-I D:\RTOS\oscilloscope\RTE\Device\LPC1768-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\INC-I D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DLPC175x_6x-o .\objects\retarget_lcd.o --omf_browse .\objects\retarget_lcd.crf --depend .\objects\retarget_lcd.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (D:\Keil_v5\ARM\ARMCC\include\rt_misc.h)(0x55DB2B78)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55DB2B7E)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (source\lcd.h)(0x5D5C1645)
+F (.\source\led.c)(0x5D5C160F)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I D:\RTOS\oscilloscope\RTE-I D:\RTOS\oscilloscope\RTE\Device\LPC1768-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\INC-I D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DLPC175x_6x-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
+I (D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\LPC17xx.h)(0x4FF4FDF8)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm3.h)(0x5625B70C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\system_LPC17xx.h)(0x4DA4EB6C)
+F (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\LIB\ARM\RTX_CM3.lib)(0x56245D06)()
+F (RTE\CMSIS\RTX_Conf_CM.c)(0x5D5C160F)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I D:\RTOS\oscilloscope\RTE-I D:\RTOS\oscilloscope\RTE\Device\LPC1768-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\INC-I D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DLPC175x_6x-o .\objects\rtx_conf_cm.o --omf_browse .\objects\rtx_conf_cm.crf --depend .\objects\rtx_conf_cm.d)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x562747DE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55DB2B7E)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\INC\RTX_CM_lib.h)(0x556D30E4)
+F (RTE\Device\LPC1768\RTE_Device.h)(0x5D5C160F)()
+F (RTE\Device\LPC1768\startup_LPC17xx.s)(0x5D5C160F)(--cpu Cortex-M3 --pd "__RTX SETA 1" --pd "__EVAL SETA 1" -g --apcs=interwork -I D:\RTOS\oscilloscope\RTE-I D:\RTOS\oscilloscope\RTE\Device\LPC1768-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\INC-I D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include--pd "__UVISION_VERSION SETA 517" --pd "_RTE_ SETA 1" --pd "LPC175x_6x SETA 1"--list .\listings\startup_lpc17xx.lst --xref -o .\objects\startup_lpc17xx.o --depend .\objects\startup_lpc17xx.d)
+F (RTE\Device\LPC1768\system_LPC17xx.c)(0x5D5C160F)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I D:\RTOS\oscilloscope\RTE-I D:\RTOS\oscilloscope\RTE\Device\LPC1768-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\RTOS\RTX\INC-I D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DLPC175x_6x-o .\objects\system_lpc17xx.o --omf_browse .\objects\system_lpc17xx.crf --depend .\objects\system_lpc17xx.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\LPC17xx.h)(0x4FF4FDF8)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm3.h)(0x5625B70C)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625A350)
+I (D:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include\system_LPC17xx.h)(0x4DA4EB6C)

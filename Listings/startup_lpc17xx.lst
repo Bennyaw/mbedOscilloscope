@@ -431,14 +431,13 @@ ARM Macro Assembler    Page 7
               00000200 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
-ork --depend=.\objects\startup_lpc17xx.d -o.\objects\startup_lpc17xx.o -I.\RTE\
-Device\LPC1768 -I.\RTE\_Target_1 -IC:\Users\User\AppData\Local\Arm\Packs\ARM\CM
-SIS\5.5.1\CMSIS\Core\Include -IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\
-5.5.1\CMSIS\RTOS\RTX\INC -IC:\Users\User\AppData\Local\Arm\Packs\Keil\LPC1700_D
-FP\2.2.0\Device\Include --predefine="__RTX SETA 1" --predefine="__EVAL SETA 1" 
---predefine="__UVISION_VERSION SETA 528" --predefine="_RTE_ SETA 1" --predefine
-="LPC175x_6x SETA 1" --list=.\listings\startup_lpc17xx.lst RTE\Device\LPC1768\s
-tartup_LPC17xx.s
+ork --depend=.\objects\startup_lpc17xx.d -o.\objects\startup_lpc17xx.o -ID:\RTO
+S\oscilloscope\RTE -ID:\RTOS\oscilloscope\RTE\Device\LPC1768 -ID:\Keil_v5\ARM\P
+ACK\ARM\CMSIS\4.5.0\CMSIS\Include -ID:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\R
+TOS\RTX\INC -ID:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.2.0\Device\Include --prede
+fine="__RTX SETA 1" --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION 
+SETA 517" --predefine="_RTE_ SETA 1" --predefine="LPC175x_6x SETA 1" --list=.\l
+istings\startup_lpc17xx.lst RTE\Device\LPC1768\startup_LPC17xx.s
 
 
 
